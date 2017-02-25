@@ -15,8 +15,9 @@ script:
   - cd src/
   - cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
   - make -j4
-  - mkdir -p appdir/usr/bin ; mkdir -p appdir/usr/share/applications ; cd appdir
+  - mkdir -p appdir/usr/{bin,lib} ; mkdir -p appdir/usr/share/applications ; cd appdir
   - cp ../src/updater ./usr/bin
+  - cp ../src/libupdatergtk.so ./usr/lib
   - cp ../resources/updater.desktop ./usr/share/applications/
   - cp ../resources/updater.desktop .
   - touch updater.png # FIXME
