@@ -15,7 +15,8 @@ script:
   - cd src/
   - cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
   - make -j4
-  - mkdir appdir/usr/bin ; cd appdir
+  - find . -executable
+  - mkdir -p appdir/usr/bin ; cd appdir
   - cp ../updater ./usr/bin
   - cp ../resources/updater.desktop ./usr/share/applications/
   - touch updater.png # FIXME
