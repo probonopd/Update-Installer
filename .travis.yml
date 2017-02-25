@@ -15,10 +15,10 @@ script:
   - cd src/
   - cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
   - make -j4
-  - find . | grep des
   - mkdir -p appdir/usr/bin ; mkdir -p appdir/usr/share/applications ; cd appdir
   - cp ../src/updater ./usr/bin
   - cp ../resources/updater.desktop ./usr/share/applications/
+  - cp ../resources/updater.desktop .
   - touch updater.png # FIXME
   - cd .. 
   - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/3/linuxdeployqt-3-x86_64.AppImage" 
