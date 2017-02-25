@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Updater
+Exec=updater
+Icon=updater
+Categories=System;
+Terminal=false
